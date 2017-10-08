@@ -3,6 +3,7 @@ function [distance] = bhattacharyya(P,Q)
     % bhattacharyya(P,Q) is the Bhattacharyya distance between two discrete
     % probability distributions P and Q.
     
-    bc = sum(sqrt(P.*Q));
-    distance = -log(bc);
+    bhattacharyya_coefficient = sum(sqrt(P.*Q));
+    
+    distance = -log(bhattacharyya_coefficient);
 end
