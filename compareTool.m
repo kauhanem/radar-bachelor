@@ -33,6 +33,9 @@ function [distances] = compareTool(P,Q,D)
         case {'h','H','hell','hellinger'}
             fun = @hellinger;
             
+        case {'e','E','emd'}
+            fun = @emd;
+            
         otherwise
             error('Error: Distance parameter not known.');
     end
